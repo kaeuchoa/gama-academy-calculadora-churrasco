@@ -1,4 +1,5 @@
-const botao = document.querySelector("#botaoCalcular")
+const botao = document.querySelector("#botaoCalcular");
+const summary = document.getElementById("summary");
 
 const calcularChurrasco = () => {
 
@@ -56,4 +57,17 @@ function getValueMeasure(val, type) {
     }
 }
 
-botao.addEventListener("click", calcularChurrasco)
+botao.addEventListener("click", ()=> {
+    calcularChurrasco();
+    showSummary();
+});
+
+summary.addEventListener('click', hideSummary)
+
+function showSummary() {
+    summary.style.top = "50%";
+}
+
+function hideSummary() {
+    summary.style.top = "100%";
+}

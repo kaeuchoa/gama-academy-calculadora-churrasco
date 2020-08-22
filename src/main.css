@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+:root {
+    --bg-color: #0d47a1;
+    --bg-accent: #002171;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.main-container {
+    height: 100vh;
+}
+
+.mContainer {
+    background-color: var(--bg-accent);
+    color: #fff;
+    padding: 30px;
+    height: 100%;
+}
+
+.mInputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.mInputGroup input {
+    width: 80px;
+    height: 60px;
+    padding: 20px;
+    border: transparent;
+    text-align: center;
+}
+
+.mInputGroup label {
+    text-align: center;
+    max-width: 80px;
+}
+
+.mSummary {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 100%;
+    bottom: 0;
+    transition: top .4s ease;
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.mSummary label {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 600;
+}
+
+.mSummary__row {
+    display: flex;
+}
+
+.mSummary--hr {
+    flex-grow: 1;
+    border-bottom: 1px dashed #333;
+    margin: 10px;
+}
+
+.mBtn {
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 40px;
+    background-color: #4fb3bf;
+}
+
+@media screen and (min-width: 540px) {
+    .mSummary {
+        max-width: 900px;
+    }
+    
+    .mBtn {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
